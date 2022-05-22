@@ -61,6 +61,9 @@ export const Navbar = () => {
           direction="row"
           spacing={6}
         >
+          <Button fontSize="sm" fontWeight={400} onClick={toggleColorMode}>
+          {colorMode === 'light' ? 'EN' : 'DE'}
+          </Button>
           <Button
             onClick={toggleColorMode}
             aria-label={colorMode === 'light' ? 'Moon Icon' : 'Sun Icon'}
