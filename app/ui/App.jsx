@@ -8,11 +8,22 @@ import {
 } from '@chakra-ui/react';
 import { Navbar } from './common/Navbar';
 import { Footer } from './common/Footer';
+import './i18n';
 
 const theme = extendTheme({
   config: {
     initialColorMode: 'dark',
     useSystemColorMode: false,
+  },
+  styles: {
+    global: (props) => ({
+      'html, body': {
+        bg: props.colorMode === 'dark' ? 'red.200' : 'red.200',
+      },
+    //   a: {
+    //     bg: props.colorMode === 'dark' ? 'teal.300' : 'red.500',
+    //   },
+    }),
   },
 });
 

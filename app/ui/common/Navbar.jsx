@@ -14,11 +14,20 @@ import { MoonIcon, SunIcon } from '@chakra-ui/icons';
 import { useTracker } from 'meteor/react-meteor-data';
 import { useNavigate } from 'react-router-dom';
 import { RoutePaths } from './Routes';
+import { useTranslation } from 'react-i18next';
 
 export const Navbar = () => {
   const { colorMode, toggleColorMode } = useColorMode();
   const user = useTracker(() => Meteor.user());
   const navigate = useNavigate();
+  const { t, i18n } = useTranslation();
+  const toggleLanguage = () => {
+      if (i18n.language === 'en') {
+          i18n.changeLanguage('de');
+      } else {
+          i18n.changeLanguage('en');
+      }
+  }
 
   const logout = () => {
     Meteor.logout(() => {
@@ -50,7 +59,7 @@ export const Navbar = () => {
               bgClip="text"
               onClick={() => navigate(RoutePaths.ROOT)}
             >
-              Simple Tasks
+              {t('main.Title')}
             </Link>
           </Text>
         </Flex>
@@ -61,8 +70,8 @@ export const Navbar = () => {
           direction="row"
           spacing={6}
         >
-          <Button fontSize="sm" fontWeight={400} onClick={toggleColorMode}>
-          {colorMode === 'light' ? 'EN' : 'DE'}
+          <Button fontSize="sm" fontWeight={400} onClick={toggleLanguage}>
+          {i18n.language}
           </Button>
           <Button
             onClick={toggleColorMode}
