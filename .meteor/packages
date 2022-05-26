@@ -29,3 +29,4 @@ percolate:migrations
 force-ssl@1.1.0
 mdg:meteor-apm-agent
 jagi:astronomy
+universe:i18n
