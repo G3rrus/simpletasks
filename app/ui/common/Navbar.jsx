@@ -38,24 +38,24 @@ export const Navbar = () => {
   return (
     <Box>
       <Flex
-        bg={useColorModeValue('white', 'gray.800')}
-        color={useColorModeValue('gray.600', 'white')}
+        bg={useColorModeValue('blue.300', 'blue.700')}
+        color={useColorModeValue('messenger.800', 'messenger.200')}
         minH="60px"
         py={{ base: 2 }}
         px={{ base: 4 }}
         borderBottom={1}
         borderStyle="solid"
-        borderColor={useColorModeValue('gray.200', 'gray.900')}
+        borderColor={useColorModeValue('blue.800', 'blue.800')}
         align="center"
       >
         <Flex flex={{ base: 1 }} justify="start">
           <Text
             textAlign="left"
             fontFamily="heading"
-            color={useColorModeValue('gray.800', 'white')}
+            color={useColorModeValue('messenger.800', 'messenger.200')}
           >
             <Link
-              bgGradient="linear(to-l, #675AAA, #4399E1)"
+              bg={useColorModeValue('messenger.800', 'messenger.200')}
               bgClip="text"
               onClick={() => navigate(RoutePaths.ROOT)}
             >
@@ -70,18 +70,38 @@ export const Navbar = () => {
           direction="row"
           spacing={6}
         >
-          <Button fontSize="sm" fontWeight={400} onClick={toggleLanguage}>
+          <Button
+            fontSize="sm"
+            fontWeight={400}
+            onClick={toggleLanguage}
+            bg={useColorModeValue('blackAlpha.300', 'whiteAlpha.200')}
+            _hover={{
+                bg: `${useColorModeValue('blackAlpha.400', 'whiteAlpha.300')}`,
+            }}
+          >
           {i18n.language}
           </Button>
           <Button
             onClick={toggleColorMode}
-            aria-label={colorMode === 'light' ? 'Moon Icon' : 'Sun Icon'}
+            aria-label={colorMode === 'light' ? 'Sun Icon' : 'Moon Icon'}
+            bg={useColorModeValue('blackAlpha.300', 'whiteAlpha.200')}
+            _hover={{
+                bg: `${useColorModeValue('blackAlpha.400', 'whiteAlpha.300')}`,
+            }}
           >
-            {colorMode === 'light' ? <MoonIcon /> : <SunIcon />}
+            {colorMode === 'light' ? <SunIcon /> : <MoonIcon />}
           </Button>
           {user && (
-            <Button fontSize="sm" fontWeight={400} onClick={logout}>
-              Sign Out
+            <Button
+                fontSize="sm"
+                fontWeight={400}
+                onClick={logout}
+                bg={useColorModeValue('blackAlpha.300', 'whiteAlpha.200')}
+                _hover={{
+                    bg: `${useColorModeValue('blackAlpha.400', 'whiteAlpha.300')}`,
+                }}
+            >
+              {t('main.logout')}
             </Button>
           )}
         </Stack>

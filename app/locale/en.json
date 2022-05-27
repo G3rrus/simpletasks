@@ -1,5 +1,42 @@
 {
     "main": {
-        "Title": "Title"
+        "Title": "Simple Tasks",
+        "logout": "Log out",
+        "error": "Sorry, please try again.",
+        "nothingFound": "There's nothing here!"
+    },
+    "signedIn": {
+        "mssg": "You are already signed in",
+        "promt": "to start creating your simple tasks",
+        "redirButton": "Go to your tasks"
+    },
+    "loginPage": {
+        "prompt": "Sign in to your account",
+        "mssg": "to start creating your simple tasks",
+        "showPassword": "Show",
+        "hidePassword": "Hide",
+        "signIn": "Sign in",
+        "create": "Create a new account",
+        "signUp": "Sign up",
+        "signedUp": "I have an account",
+        "enterUserPrompt": "Enter your username",
+        "enterPasswordPrompt": "Enter your password",
+        "needUser": "Username is required",
+        "needPwd": "Password is required"
+    },
+    "taskPage": {
+        "newTaskDesc": "Type to add new tasks",
+        "addTask": "Add Task",
+        "remove": "Remove",
+        "show": "Show all Tasks",
+        "pending": "Show Pending",
+        "desReq": "Task description is required"
+    },
+    "tsksPen": {
+        "mp1": "You have",
+        "mp2": "Task ",
+        "mp3": "Tasks ",
+        "mp4": "and",
+        "mp5": "pending."
     }
 }

@@ -18,7 +18,7 @@ const theme = extendTheme({
   styles: {
     global: (props) => ({
       'html, body': {
-        bg: props.colorMode === 'dark' ? 'red.200' : 'red.200',
+        bg: props.colorMode === 'dark' ? 'blue.600' : 'blue.200',
       },
     //   a: {
     //     bg: props.colorMode === 'dark' ? 'teal.300' : 'red.500',

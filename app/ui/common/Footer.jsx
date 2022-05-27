@@ -24,9 +24,9 @@ export const Footer = () => (
     }}
   >
     <Stack>
-      <Divider my="5" borderColor={useColorModeValue('gray.200', 'gray.700')} />
+      <Divider my="5" borderColor={useColorModeValue('blue.800', 'blue.800')} />
       <Stack direction="row" spacing="2" align="center" justify="space-between">
-        <ButtonGroup variant="ghost" color="gray.600">
+        <ButtonGroup variant="ghost" color={useColorModeValue('messenger.800', 'messenger.200')}>
           <IconButton
             as="a"
             target="_blank"

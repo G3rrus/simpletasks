@@ -7,16 +7,19 @@ import {
   Box,
   InputGroup,
   InputRightElement,
+  useColorModeValue,
 } from '@chakra-ui/react';
 import { object, string } from 'yup';
 import { useFormik } from 'formik';
 import { ErrorStatus } from '../common/ErrorStatus';
 import { insertTask } from '../../tasks/InsertTask';
+import { useTranslation } from 'react-i18next';
 
 export const TaskForm = () => {
+  const { t, i18n } = useTranslation();
   const validationSchema = object({
     description: string('Enter task description').required(
-      'Task description is required'
+      t('taskPage.desReq')
     ),
   });
 
@@ -24,7 +27,7 @@ export const TaskForm = () => {
     const description = values.description.trim();
     insertTask.call({ description }, error => {
       if (error) {
-        const errorMessage = error?.reason || 'Sorry, please try again.';
+        const errorMessage = error?.reason || t('main.error');
         actions.setStatus(errorMessage);
       } else {
         actions.resetForm();
@@ -54,7 +57,12 @@ export const TaskForm = () => {
               name="description"
               onChange={formik.handleChange}
               value={formik.values.description}
-              placeholder="Type to add new tasks"
+              borderColor={useColorModeValue('blue.800', 'blue.400')}
+              placeholder={t('taskPage.newTaskDesc')}
+              _placeholder={{
+                color: 'gray.800',
+            }}
+              color={useColorModeValue('gray.800', 'gray.400')}
             />
             <FormErrorMessage>{formik.errors.description}</FormErrorMessage>
           </FormControl>
@@ -66,7 +74,7 @@ export const TaskForm = () => {
               isLoading={formik.isSubmitting}
               colorScheme="blue"
             >
-              Add Task
+              {t('taskPage.addTask')}
             </Button>
           </InputRightElement>
         </InputGroup>

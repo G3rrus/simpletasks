@@ -1,5 +1,42 @@
 {
     "main": {
-        "Title": "Titel"
+        "Title": "Simple Checkliste",
+        "logout": "Ausloggen",
+        "error": "Entschuldigung, bitte versuche es erneut.",
+        "nothingFound": "Hier gibt es nichts!"
+    },
+    "signedIn": {
+        "mssg": "Du bist schon eingeloggt",
+        "promt": "um anzufangen deine Aufgaben zu managen",
+        "redirButton": "Gehe zu deinen Aufgaben"
+    },
+    "loginPage": {
+        "prompt": "In den Account einloggen",
+        "mssg": "um mit dem Aufgaben erstellen zu starten",
+        "showPassword": "Anzeigen",
+        "hidePassword": "Verstecken",
+        "signIn": "Einloggen",
+        "create": "Neuen Account erstellen",
+        "signUp": "Registrieren",
+        "signedUp": "Ich habe schon einen account",
+        "enterUserPrompt": "Usernamen eingeben",
+        "enterPasswordPrompt": "Passwort eingeben",
+        "needUser": "Accountname ist Muss",
+        "needPwd": "Passwort ist Muss"
+    },
+    "taskPage": {
+        "newTaskDesc": "Schreiben um neuen Task hinzuzufügen",
+        "addTask": "Hinzufügen",
+        "remove": "Löschen",
+        "show": "Alle Aufgaben",
+        "pending": "Ausstehende Aufgaben",
+        "desReq": "Aufgabenbeschreibung ist ein Muss"
+    },
+    "tsksPen": {
+        "mp1": "Du hast",
+        "mp2": "Aufgabe ",
+        "mp3": "Aufgaben ",
+        "mp4": "und",
+        "mp5": "ausstehend."
     }
 }
